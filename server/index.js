@@ -25,7 +25,7 @@ import path from 'path';
 import fs from 'fs';
 
 const __dirname = path.resolve();
-const referencePath = 'C:\\Users\\olive\\.gemini\\antigravity\\brain\\94439324-9f89-47cd-9050-3671c8674db2\\reference_agreement.md';
+const referencePath = path.join(__dirname, 'reference_agreement.md');
 const GOLD_STANDARD_REFERENCE = fs.readFileSync(referencePath, 'utf-8');
 
 app.post('/api/generate-agreement', async (req, res) => {
