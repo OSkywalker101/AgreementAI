@@ -11,6 +11,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('SEBRI Backend API is live! Use the frontend to interact with it.');
+});
+
 const PORT = process.env.PORT || 5000;
 
 // Initialize Gemini
